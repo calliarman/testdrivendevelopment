@@ -17,11 +17,11 @@ public class OrderDaoJpaImplTest_Demo2 extends BaseDBUnitTestForJPADao {
 	
 	private final static class DataFiles {
 		private final static String XML_DATA_SET = 
-				"com/bigbox/b2csite/order/dao/impl/OrderDaoJpaImplTest_XMLDataSet.xml";
+				"/order/dao/impl/OrderDaoJpaImplTest_XMLDataSet.xml";
 		private final static String FLAT_XML_DATA_SET = 
-				"com/bigbox/b2csite/order/dao/impl/OrderDaoJpaImplTest_FlatXMLDataSet.xml";
+				"/order/dao/impl/OrderDaoJpaImplTest_FlatXMLDataSet.xml";
 		private final static String XLS_DATA_SET = 
-				"com/bigbox/b2csite/order/dao/impl/OrderDaoJpaImplTest_XlsDataSet.xls";
+				"/order/dao/impl/OrderDaoJpaImplTest_XlsDataSet.xls";
 	}
 	
 	private OrderDaoJpaImpl target = null;
