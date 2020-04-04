@@ -16,11 +16,11 @@ import order.model.entity.OrderItemEntity;
 public class OrderEntityToOrderSTTest {
 
 	private OrderEntityToOrderST target = null;
-	
+
+	//each time the class is run, it works
 	@Before
 	public void setup() {
 		target = new OrderEntityToOrderST();
-		this.target = new OrderEntityToOrderST();
 	}
 	
 	@Test
@@ -55,7 +55,8 @@ public class OrderEntityToOrderSTTest {
 	public void test_transform_inputIsNull() {
 		target.transform(null);
 	}
-	
+
+	@Test
 	public void test_transform_noItemsInOrder() {
 		
 		String orderNumberFixture = UUID.randomUUID().toString();
@@ -67,8 +68,8 @@ public class OrderEntityToOrderSTTest {
 		OrderSummary result = target.transform(orderEntityFixture);
 		
 		Assert.assertNotNull(result);
-		
+
 		Assert.assertEquals(0, result.getItemCount());
-		Assert.assertEquals(new BigDecimal("13.00"), result.getTotalAmount());
+		Assert.assertEquals(new BigDecimal("0.00"), result.getTotalAmount());
 	}
 }

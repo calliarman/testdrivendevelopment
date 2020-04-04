@@ -1,0 +1,25 @@
+TDD;Test Driven Development|Design
+
+red->green->refactor
+
+PowerMockito
+
+terminology
+xUnit Testing
+Class-Under-Test
+Method-Under-Test
+Test Fixture
+
+repeatable and consistent
+
+frameworks
+    Mockito(%80)
+    DBUnit
+    PowerMockito(%20)
+
+
+Annotations
+    @Test
+    @After/@AfterClass
+    @Before/@BeforeClass
+    @Ignore
