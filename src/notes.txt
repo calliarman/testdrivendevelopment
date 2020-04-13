@@ -2,6 +2,8 @@ TDD;Test Driven Development|Design
 
 red->green->refactor
 
+setup->execution->verification
+
 PowerMockito
 
 terminology
@@ -23,3 +25,12 @@ Annotations
     @After/@AfterClass
     @Before/@BeforeClass
     @Ignore
+
+ArgumentCaptor is used to get an object to verify which is not returned when a method is triggered.
+
+
+final & private methods cannot be mocked with mockito
+
+static methods can be mocked with PowerMockito
+
+PowerMockito can mock object instantiation

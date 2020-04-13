@@ -3,6 +3,7 @@ package order.service.impl;
 import java.util.LinkedList;
 import java.util.List;
 
+import order.service.OrderService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -40,7 +41,7 @@ public class OrderServiceImplTest {
 	@Test
 	public void test_getOrderSummary_success() throws Exception {
 		
-		OrderServiceImpl target = new OrderServiceImpl();
+		/*OrderServiceImpl target = new OrderServiceImpl();
 		
 		// Setup
 		OrderDao mockOrderDao = Mockito.mock(OrderDao.class);
@@ -48,7 +49,7 @@ public class OrderServiceImplTest {
 		
 		OrderEntityToOrderST mockTransformer =
 				Mockito.mock(OrderEntityToOrderST.class);
-		target.setTransformer(mockTransformer);
+		target.setTransformer(mockTransformer);*/
 		
 		OrderEntity orderEntityFixture = new OrderEntity();
 		List<OrderEntity> orderEntityFixtureList = new LinkedList<>();
@@ -105,8 +106,7 @@ public class OrderServiceImplTest {
 		}
 		finally {
 			// Verification
-			Mockito.verify(mockOrderDao, Mockito.times(2))
-			.insert(Mockito.any(OrderEntity.class));
+			Mockito.verify(mockOrderDao, Mockito.times(2)).insert(Mockito.any(OrderEntity.class));
 		}
 	}
 	

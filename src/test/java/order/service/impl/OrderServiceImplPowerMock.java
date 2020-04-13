@@ -1,13 +1,16 @@
 package order.service.impl;
 
-import java.util.LinkedList;
+import  java.util.LinkedList;
 
+import order.model.message.OrderMessage;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -61,12 +64,14 @@ public class OrderServiceImplPowerMock {
 		.thenReturn(orderFixture);
 		
 		// Add static mocking here
-		
+		PowerMockito.mockStatic(WarehouseManagementService.class);
+		//PowerMockito.when(WarehouseManagementService.sendOrder(Matchers.any(OrderMessage.class))).thenReturn(true);
 		
 		// Execution
 		target.completeOrder(ORDER_ID);
 		
 		// Verification
 		Mockito.verify(mockOrderDao).findById(ORDER_ID);
+		PowerMockito.verifyStatic();
 	}
 }

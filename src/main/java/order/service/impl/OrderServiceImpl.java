@@ -39,8 +39,7 @@ public class OrderServiceImpl implements OrderService {
 	}
 	
 	@Override
-	public List<OrderSummary> getOrderSummary(long customerId)
-			throws ServiceException {
+	public List<OrderSummary> getOrderSummary(long customerId) throws ServiceException {
 		
 		// Goal - interact with the dao to gather entities and 
 		// create summary domain objects
